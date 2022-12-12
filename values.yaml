@@ -1,0 +1,14 @@
+name: "my-app"
+namespace: "my-app-namespace"
+
+deployment:
+  image: "nginx"
+  tag: "1.14.2"
+  containerPort: "80"
+  containerName: "my-app-container"
+  replicas: 3
+
+service:
+  type: "NodePort"
+  port: "80"
+  nodePort: "30000"
